@@ -9,10 +9,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
     <canvas id="liquid-background"></canvas>
-
+    
     <header class="header">
         <a href="#" class="logo">Welcome to My Portfolio</a>
         <nav class="navbar">
@@ -41,10 +42,12 @@
                 </div>
             </div>
             <div class="hero-image">
-                <div class="circle large-circle">Abhishek Kumar</div>
-                <div class="circle small-circle-1">Hire me!</div>
-                <div class="circle small-circle-2">Hello!</div>
-            </div>
+    <div class="profile-pic-wrapper">
+        <img src="definition.jpg" alt="Abhishek Kumar" class="hero-profile-pic">
+    </div>
+    <div class="circle small-circle-1">Hire me!</div>
+    <div class="circle small-circle-2">Hello!</div>
+</div>
         </section>
 
         <section class="about-section" id="about">
@@ -235,6 +238,7 @@
                 <div class="projects-grid">
 
             <div class="project-card">
+                <img src="E-Commerce.png" alt="E-Commerce Platform Thumbnail" class="w-full h-48 object-cover rounded-xl shadow-lg hover:scale-105 transition-transform" loading="lazy"/>
                     <div class="project-info">
                         <h3>E-Commerce Platform</h3>
                         <p>Full-stack e-commerce solution with product catalog, cart, and secure payments.</p>
@@ -249,6 +253,7 @@
     </div>
 
     <div class="project-card purple-card">
+        <img src="FIRE.png" alt="Forest Fire Detection Thumbnail" class="w-full h-48 object-cover rounded-xl shadow-lg hover:scale-105 transition-transform" loading="lazy"/>
       <div class="project-info">
         <h3>Forest Fire Detection</h3>
         <p>Deep learning system to predict and detect forest fires using satellite data.</p>
@@ -263,6 +268,7 @@
     </div>
 
     <div class="project-card green-card">
+        <img src="AI RAG.png" alt="AI RAG Chatbot Thumbnail" class="w-full h-48 object-cover rounded-xl shadow-lg hover:scale-105 transition-transform" loading="lazy"/>
       <div class="project-info">
         <h3>AI RAG Chatbot</h3>
         <p>Context-aware chatbot powered by Retrieval-Augmented Generation for accurate answers.</p>
@@ -277,6 +283,7 @@
     </div>
 
     <div class="project-card orange-card">
+        <img src="MuseumDB.png" alt="Database Design - Museum Thumbnail" class="w-full h-48 object-cover rounded-xl shadow-lg hover:scale-105 transition-transform" loading="lazy"/>
       <div class="project-info">
         <h3>Database Design - Museum</h3>
         <p>Relational database model for museum collections, staff, and visitor management.</p>
@@ -290,6 +297,7 @@
     </div>
 
     <div class="project-card">
+        <img src="Spotify-sales.png" alt="Database Design - Spotify Sales Thumbnail" class="w-full h-48 object-cover rounded-xl shadow-lg hover:scale-105 transition-transform" loading="lazy"/>
       <div class="project-info">
         <h3>Database Design - Spotify Sales</h3>
         <p>Schema design for analyzing music sales, subscriptions, and user activity.</p>
@@ -303,6 +311,7 @@
     </div>
 
     <div class="project-card purple-card">
+        <img src="Game Server.png" alt="Database Design - Game Server Thumbnail" class="w-full h-48 object-cover rounded-xl shadow-lg hover:scale-105 transition-transform" loading="lazy"/>
       <div class="project-info">
         <h3>Database Design - Game Server</h3>
         <p>Scalable database design for multiplayer game users, matchmaking, and leaderboards.</p>
@@ -325,18 +334,22 @@
                 <div class="timeline-line"></div>
                 <div class="experience-item item-left">
                     <div class="experience-card">
-                        <div class="company-logo" style="background-color: #cc8108;">LU</div>
+                        <div class="company-logo" style="background-color: #cc8108;">
+                            <img src="letsupgrade-166a9d6e.webp" alt="LetsUpgrade logo" class="w-16 h-16 rounded-full" loading="lazy"/>
+                        </div>
                         <div class="experience-details">
                             <h4>Lets Upgrade</h4>
                             <p class="role">Student Ambassador</p>
                             <p class="years">March,2025 - Apr, 2025</p>
-                            <p class="description">As a Student Ambassador for Let's Upgrade, I actively promote tech learning and upskilling opportunities by engaging with students, organizing events, and fostering a strong community. My role involves spreading awareness about Let's Upgrade programs, encouraging participation in workshops, and enhancing peer learning. Through this program, I develop leadership, communication, and networking skills while contributing to a dynamic tech ecosystem.</p>
+                            <p class="description">As a Student Ambassador for Let's Upgrade, I actively promote tech learning and upskilling opportunities by engaging with students, organizing events, and fostering a strong community.Through this program, I develop leadership, communication, and networking skills while contributing to a dynamic tech ecosystem.</p>
                         </div>
                     </div>
                 </div>
                 <div class="experience-item item-right">
                     <div class="experience-card">
-                        <div class="company-logo" style="background-color: #04a0f4;">ibm</div>
+                        <div class="company-logo" style="background-color: #04a0f4;">
+                            <img src="edunet-partners.webp" alt="Edunet Foundation - IBM Skillbuild & SHELL logo" class="w-16 h-16 rounded-full" loading="lazy"/>
+                        </div>
                         <div class="experience-details">
                             <h4>Edunet Foundation - IBM Skillbuild & SHELL</h4>
                             <p class="role">Full Stack Developer</p>
@@ -347,7 +360,9 @@
                 </div>
                 <div class="experience-item item-left">
                     <div class="experience-card">
-                        <div class="company-logo" style="background-color: #3182ce;">IBM</div>
+                        <div class="company-logo" style="background-color: #3182ce;">
+                            <img src="edunet-partners.webp" alt="Edunet Foundation - IBM Skillbuild logo" class="w-16 h-16 rounded-full" loading="lazy"/>
+                        </div>
                         <div class="experience-details">
                             <h4>Edunet Foundation - IBM Skillbuild</h4>
                             <p class="role">Project Intern - Frontend Development</p>
@@ -423,6 +438,7 @@
                     <button type="submit" class="btn">Send Message</button>
                 </form>
                 <div class="contact-info">
+                    <img src="hugme.png" alt="Contact section decorative illustration" class="mb-6 rounded-xl shadow-lg" loading="lazy"/>
                     <h3>Connect With Me</h3>
                     <div class="social-icons">
                         <a href="https://github.com/abhishekkumar177"><i class='bx bxl-github'></i></a>
