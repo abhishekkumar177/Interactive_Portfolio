@@ -4,11 +4,27 @@ document.addEventListener('DOMContentLoaded', () => {
     const moonIcon = document.querySelector('.moon-icon');
     const body = document.body;
 
+    // Theme color palettes
+    const lightModeColors = ['#7ac4ff', '#ff4d6d', '#ffce54'];
+    const darkModeColors = ['#6c63ff', '#7b439c', '#3182ce', '#ed8936'];
+    let currentColors;
+
+    // Set initial colors based on current theme
+    if (body.classList.contains('dark-mode')) {
+        currentColors = darkModeColors;
+        moonIcon.innerHTML = '<i class="bx bxs-sun"></i>';
+    } else {
+        currentColors = lightModeColors;
+        moonIcon.innerHTML = '<i class="bx bx-moon"></i>';
+    }
+    
     moonIcon.addEventListener('click', () => {
         body.classList.toggle('dark-mode');
         if (body.classList.contains('dark-mode')) {
+            currentColors = darkModeColors;
             moonIcon.innerHTML = '<i class="bx bxs-sun"></i>';
         } else {
+            currentColors = lightModeColors;
             moonIcon.innerHTML = '<i class="bx bx-moon"></i>';
         }
     });
@@ -96,9 +112,12 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(item);
     });
 
-    // Liquid Ether Background Animation
+
+    // --- Combined Background Animations --- 
     const canvas = document.getElementById('liquid-background');
     const ctx = canvas.getContext('2d');
+    let mouse = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
+    let particles = [];
     let blobs = [];
 
     // Set canvas size
@@ -137,9 +156,41 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    const init = () => {
+    class Particle {
+        constructor(x, y, color) {
+            this.x = x;
+            this.y = y;
+            this.size = Math.random() * 5 + 1;
+            this.speedX = Math.random() * 3 - 1.5;
+            this.speedY = Math.random() * 3 - 1.5;
+            this.color = color;
+            this.alpha = 1;
+        }
+        update() {
+            this.x += this.speedX;
+            this.y += this.speedY;
+            this.alpha -= 0.01;
+            if (this.alpha < 0) this.alpha = 0;
+            this.size *= 0.98;
+        }
+        draw() {
+            const hexColor = this.color.slice(1);
+            const r = parseInt(hexColor.substring(0, 2), 16);
+            const g = parseInt(hexColor.substring(2, 4), 16);
+            const b = parseInt(hexColor.substring(4, 6), 16);
+
+            ctx.fillStyle = `rgba(${r}, ${g}, ${b}, ${this.alpha})`;
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+            ctx.fill();
+        }
+    }
+
+
+    function init() {
+        // Initialize Blobs
         blobs = [];
-        const colors = ['#6c63ff', '#7b439c', '#3182ce', '#ed8936'];
+        const blobColors = body.classList.contains('dark-mode') ? darkModeColors : lightModeColors;
         for (let i = 0; i < 5; i++) {
             const radius = 100 + Math.random() * 150;
             const x = Math.random() * (canvas.width - radius * 2) + radius;
@@ -148,22 +199,43 @@ document.addEventListener('DOMContentLoaded', () => {
                 x: (Math.random() - 0.5) * 1,
                 y: (Math.random() - 0.5) * 1
             };
-            const color = colors[Math.floor(Math.random() * colors.length)];
+            const color = blobColors[Math.floor(Math.random() * blobColors.length)];
             blobs.push(new Blob(x, y, radius, color, velocity));
         }
-    };
 
-    const animate = () => {
+        // Initialize Particles with mousemove listener
+        window.addEventListener('mousemove', (e) => {
+            mouse.x = e.x;
+            mouse.y = e.y;
+            for (let i = 0; i < 5; i++) {
+                particles.push(new Particle(mouse.x, mouse.y, currentColors[Math.floor(Math.random() * currentColors.length)]));
+            }
+        });
+    }
+
+    function animate() {
         requestAnimationFrame(animate);
         ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        // Update and draw blobs
         blobs.forEach(blob => {
             blob.update();
             blob.draw();
         });
-    };
+        
+        // Update and draw particles
+        for (let i = 0; i < particles.length; i++) {
+            particles[i].update();
+            particles[i].draw();
+            if (particles[i].size < 0.3) {
+                particles.splice(i, 1);
+                i--;
+            }
+        }
+    }
 
     window.addEventListener('resize', setCanvasSize);
-
+    
     setCanvasSize();
     init();
     animate();
