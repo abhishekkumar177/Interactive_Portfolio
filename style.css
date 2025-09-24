@@ -334,8 +334,8 @@ section {
 /* New Profile Picture Styles */
 .profile-pic-wrapper {
     position: relative;
-    width: 250px;
-    height: 250px;
+    width: 350px;
+    height: 350px;
     border-radius: 50%;
     overflow: hidden;
     z-index: 2;
