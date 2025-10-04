@@ -1,6 +1,6 @@
 # WEBSITE LOOKS
 
-[![Abhishek kumar github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=abhishekkumar177&bg_color=0f0f0f&color=e9e2e9&line=27ce51&point=eae6e6&area=true&hide_border=true)](https://github.com/abhishekkumar177/Interactive_Portfolio/github-readme-activity-graph)
+[![Abhishek kumar github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=abhishekkumar177&repo=Interactive_Portfolio&bg_color=0f0f0f&color=e9e2e9&line=27ce51&point=eae6e6&area=true&hide_border=true)](https://github.com/abhishekkumar177/Interactive_Portfolio/github-readme-activity-graph)
 
 
 ## Light Mode
