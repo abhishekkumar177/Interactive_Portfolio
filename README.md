@@ -2,8 +2,9 @@
 
 ## Light Mode
 
-<img src = "https://media.licdn.com/dms/image/v2/D5622AQHGosHXzQD4-A/feedshare-shrink_2048_1536/B56ZkgQ5RUKEAw-/0/1757182925992?e=1760572800&v=beta&t=3-Rv71Ukjwhq4shRnJxUISFezC6_sOP49scMeF0_Ep4">
+<img width="1901" height="937" alt="Screenshot 2025-10-16 184434" src="https://github.com/user-attachments/assets/2ad1e652-1264-4aa7-93e3-278d37e007e2" />
 
 ## Dark Mode
 
-<img src = "https://media.licdn.com/dms/image/v2/D5622AQHcRmzaY_Nilw/feedshare-shrink_2048_1536/B56ZkgQ5RJHQAw-/0/1757182926082?e=1760572800&v=beta&t=i_kKonAt4eZfCTpJL1USe7ziYqIcRrUOxKoM0yX1uxo">
+<img width="1902" height="932" alt="Screenshot 2025-10-16 184450" src="https://github.com/user-attachments/assets/90ed50cb-a21f-4e74-955e-ea4ce0cd3a77" />
+
