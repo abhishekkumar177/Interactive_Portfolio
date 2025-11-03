@@ -75,6 +75,8 @@ The experience section outlines roles, including internships and ambassadorships
 
 ### Dark Mode
 
+<img width="1902" height="932" alt="Screenshot 2025-10-16 184450" src="https://github.com/user-attachments/assets/90ed50cb-a21f-4e74-955e-ea4ce0cd3a77" />
+
 \<img width="1902" height="932" alt="Screenshot 2025-10-16 184450" src="[https://github.com/user-attachments/assets/90ed50cb-a21f-4e74-955e-ea4ce0cd3a77](https://github.com/user-attachments/assets/90ed50cb-a21f-4e74-955e-ea4ce0cd3a77)" /\>
 
 -----
